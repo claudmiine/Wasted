@@ -6,13 +6,21 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './screens/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
 
+// import { initializeApp } from 'firebase/app';
+// import {firebaseConfig } from 'firebase.js'
+// // TODO: Replace the following with your app's Firebase project configuration
+
+// const app = initializeApp(firebaseConfig);
+// const auth = getAuth(app);
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+console.log("I'm here, a dog.")
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginScreen} />
+        {/* <Stack.Screen options={{ headerShown: false }} name="Login" component={LoginScreen} /> */}
         <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
